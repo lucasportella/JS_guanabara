@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Países</title>
+</head>
+<body>
+    <h2>Diga seu país:</h2>
+    <input type="text" id="input-text">
+    <input type="button" value="Ok" id="input-button" onclick="clicar()">
+    <div id="texto">
+    </div>
+    <script>
+        function clicar() {
+            var varInputTexto = window.document.getElementById('input-text')
+            var varValueInputTexto = varInputTexto.value
+            var varTexto = window.document.getElementById('texto')
+            varTexto.innerHTML = `Seu país é o <strong>${varValueInputTexto}</strong>.`
+
+            if (varValueInputTexto.toUpperCase() === 'BRASIL' || varValueInputTexto.toUpperCase() === 'BRAZIL') {
+                varTexto.innerHTML += `Você é Brasileiro.`
+        } else {
+                varTexto.innerHTML += `</br>Você é estrangeiro.`
+        }
+        }
+    </script>
+</body>
+</html>
